@@ -29,8 +29,8 @@ function guessNumber() {
     count += 1;
     console.log(count);
 
-    numberTry.value = 'Número de intentos: '
-    count;
+    numberTry.value = 'Número de intentos: ' +
+        count;
 
 }
 updateElement.addEventListener('click', guessNumber);
