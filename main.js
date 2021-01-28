@@ -18,13 +18,13 @@ function guessNumber() {
     let choosenNumberValue = choosenNumber.value;
     choosenNumberValue = parseInt(choosenNumberValue);
 
-    if (choosenNumberValue < randomNumberSimple) {
+    if (choosenNumberValue < randomNumberSimple && choosenNumberValue > 1) {
         numberTip.value = 'Demasiado bajo';
-    } else if (choosenNumberValue > randomNumberSimple) {
+    } else if (choosenNumberValue > randomNumberSimple && choosenNumberValue < 100) {
         numberTip.value = 'Demasiado alto';
-    } else if (choosenNumberValue = randomNumberSimple) {
-        numberTip.value = 'Has ganado campeona!!';
-    } else { numberTip.value = 'El número debe estar entre el 1 y el 100' }
+    } else if (choosenNumberValue < 1 && choosenNumberValue > 100) {
+        numberTip.value = 'El número debe estar entre el 1 y el 100';
+    } else { numberTip.value = 'Has ganado campeona!!' }
 
     contador = 0 + 'click';
 
