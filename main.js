@@ -18,9 +18,9 @@ function guessNumber() {
     let choosenNumberValue = choosenNumber.value;
     choosenNumberValue = parseInt(choosenNumberValue);
 
-    if (choosenNumberValue < randomNumberSimple && choosenNumberValue > 1) {
+    if (choosenNumberValue < randomNumberSimple) {
         numberTip.value = 'Demasiado bajo';
-    } else if (choosenNumberValue > randomNumberSimple && choosenNumberValue < 100) {
+    } else if (choosenNumberValue > randomNumberSimple) {
         numberTip.value = 'Demasiado alto';
     } else if (choosenNumberValue < 1 && choosenNumberValue > 100) {
         numberTip.value = 'El número debe estar entre el 1 y el 100';
