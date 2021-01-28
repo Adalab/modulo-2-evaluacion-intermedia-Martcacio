@@ -26,10 +26,14 @@ function guessNumber() {
         numberTip.value = 'El número debe estar entre el 1 y el 100';
     } else { numberTip.value = 'Has ganado campeona!!' }
 
-    contador = 0 + 'click';
+    count += 1;
+    console.log(count);
+
+    numberTry.value = 'Número de intentos: '
+    count;
 
 }
 updateElement.addEventListener('click', guessNumber);
 
 //Contador
-let contador = 0;
+let count = 0;
