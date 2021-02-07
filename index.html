@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./main.css" />
     <title>Evaluación intermedia módulo 2, Marta Cano Palacio</title>
 </head>
 
 <body>
     <main class="main">
         <h1 class="title">Adivina el número</h1>
-        <p>Introduce aquí tu número:</p>
-        <div class="form-action">
 
-            <input class="form__input js-action" id="action" type="number" name="action" />
-        </div>
-        <input type="button" value="Prueba" class="button js-button">
+        <form class="form-action">
+            <div class="action">
+                <label for="escribe aqui">Introduce tu número:</label>
+                <input class="form__input js-action" id="action" type="number" name="action" placeholder="Escribe aquí tu número" id="escribe-aqui" />
+            </div>
+            <input type="button" value="Prueba" class="button js-button" placeholder="prueba si el número que elegiste es el correcto">
+        </form>
         <div class="container">
             <form class="form">
-                <div class="form-tip">
+                <div class="tip">
 
                     <input class="form__input js-tip" placeholder="Pista: Escribe el número y dale a prueba" id="tip" type="text" name="tip" />
                 </div>
-                <div class="form-try">
+                <div class="try">
 
                     <input placeholder="Número de intentos: 0" class="form__input js-try" id="try" type="text" name="try" />
                 </div>

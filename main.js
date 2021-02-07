@@ -4,17 +4,20 @@ const choosenNumber = document.querySelector('.js-action');
 const numberTip = document.querySelector('.js-tip');
 const numberTry = document.querySelector('.js-try');
 
+//Contador
+let count = 0;
 
-const randomNumber = Math.random();
-const randomNumberHundred = randomNumber * 100;
-const randomNumberSimple = Math.ceil(randomNumberHundred);
+
+function randomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
+const randomNumberSimple = randomNumber(100);
 console.log('El número aleatorio es:',
     randomNumberSimple);
 
 
 
 function guessNumber() {
-
     let choosenNumberValue = choosenNumber.value;
     choosenNumberValue = parseInt(choosenNumberValue);
 
@@ -27,14 +30,15 @@ function guessNumber() {
     } else if (choosenNumberValue === randomNumberSimple) {
         numberTip.value = 'Has ganado campeona!!';
     } else { numberTip.value = 'Escribe el número y dale a prueba' }
+}
+updateElement.addEventListener('click', guessNumber);
 
+
+
+function counterElement() {
     count += 1;
 
     numberTry.value = 'Número de intentos: ' +
         count;
-
 }
-updateElement.addEventListener('click', guessNumber);
-
-//Contador
-let count = 0;
+updateElement.addEventListener('click', counterElement);
