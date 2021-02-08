@@ -17,21 +17,23 @@ console.log('El número aleatorio es:',
 
 
 
+
 function guessNumber() {
     let choosenNumberValue = choosenNumber.value;
+    let numberTipValue = "";
     choosenNumberValue = parseInt(choosenNumberValue);
 
     if (choosenNumberValue < 1 || choosenNumberValue > 100) {
-        numberTip.value = 'El número debe estar entre el 1 y el 100';
+        numberTipValue = 'El número debe estar entre el 1 y el 100';
     } else if (choosenNumberValue > randomNumberSimple) {
-        numberTip.value = 'Demasiado alto';
+        numberTipValue = 'Demasiado alto';
     } else if (choosenNumberValue < randomNumberSimple) {
-        numberTip.value = 'Demasiado bajo';
+        numberTipValue = 'Demasiado bajo';
     } else if (choosenNumberValue === randomNumberSimple) {
-        numberTip.value = 'Has ganado campeona!!';
-    } else { numberTip.value = 'Escribe el número y dale a prueba' }
+        numberTipValue = 'Has ganado campeona!!';
+    } else { numberTipValue = 'Escribe el número y dale a prueba' }
+    numberTip.value = numberTipValue;
 }
-updateElement.addEventListener('click', guessNumber);
 
 
 
@@ -41,4 +43,13 @@ function counterElement() {
     numberTry.value = 'Número de intentos: ' +
         count;
 }
-updateElement.addEventListener('click', counterElement);
+
+function handleButton() {
+    randomNumber();
+    guessNumber();
+    counterElement();
+
+}
+
+
+updateElement.addEventListener('click', handleButton);
